@@ -44,7 +44,7 @@ The goal of this project is to build a comprehensive report using fictitious dat
 
 ### 3. Performance Tracker
    - **Employee Performance**: Tracks performance metrics for each employee, including start date, last review date, and next review date.
-   - **Performance Trends**: Visualizes trends in self-ratings and manager ratings.
+   - **Performance Trends**: Visualizes trends in self-ratings, manager ratings, and satisfaction scores.
 
    ![Performance Tracker](./5.jpg)
 
