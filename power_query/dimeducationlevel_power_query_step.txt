@@ -1,0 +1,6 @@
+let
+    Source = Csv.Document(File.Contents("D:\งาน\Datacamp\Learn\Power BI\9.Case Study HR Analytics in Power BI\Datasets\EducationLevel.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"EducationLevelID", Int64.Type}, {"EducationLevel", type text}})
+in
+    #"Changed Type"
