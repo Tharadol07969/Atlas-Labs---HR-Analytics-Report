@@ -83,7 +83,7 @@ The dataset includes:
 ## ⚡ How to Use This Project
 
 ### **Power BI Report**
-- Download the **Atlas_Labs_HR_Report.pbix**.
+- Download the **hr_analytics_report_atlaslabs.pbix**.
 - Open the file in **Power BI Desktop**.
 - Interact with the report to explore detailed insights.
 
