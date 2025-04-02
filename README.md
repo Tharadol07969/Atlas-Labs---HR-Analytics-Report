@@ -1,99 +1,136 @@
 # Atlas Labs HR Analytics Report
 
-## 📌 Table of Contents
-1. [Introduction](#introduction)
-2. [Dataset Overview](#dataset-overview)
-3. [Data Preparation](#data-preparation)
-   - [Data Inspection and Cleaning](#data-inspection-and-cleaning)
-   - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-   - [Data Modeling](#data-modeling)
-4. [Report Creation and Visualization](#report-creation-and-visualization)
-   - [Overview](#overview)
-   - [Demographics](#demographics)
-   - [Performance Tracker](#performance-tracker)
-   - [Attrition](#attrition)
-5. [Key Findings & Insights](#key-findings--insights)
-6. [How to Use This Project](#how-to-use-this-project)
-7. [Future Work & Improvements](#future-work--improvements)
-8. [References](#references)
+This report provides an in-depth analysis of employee performance, demographics, and attrition within **Atlas Labs** using **Power BI**. By exploring key HR metrics, the report identifies trends and factors driving employee turnover, offering actionable insights for HR decision-makers.
 
-## 📌 Introduction
-This report aims to analyze employee performance, demographics, and attrition within **Atlas Labs** using **Power BI**. The dataset includes metrics such as employee performance ratings, satisfaction levels, and factors influencing employee retention.
+---
 
-## 📂 Dataset Overview
-The dataset includes:
+## Table of Contents
+1. [Introduction](#introduction)  
+2. [Dataset Overview](#dataset-overview)  
+3. [Data Preparation](#data-preparation)  
+   - [Data Inspection and Cleaning](#data-inspection-and-cleaning)  
+   - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
+   - [Data Modeling](#data-modeling)  
+4. [Report and Visualization](#report-and-visualization)  
+   - [Overview Page](#overview-page)  
+   - [Demographics Page](#demographics-page)  
+   - [Performance Tracker Page](#performance-tracker-page)  
+   - [Attrition Page](#attrition-page)  
+5. [Key Findings & Insights](#key-findings--insights)  
+6. [How to Use This Project](#how-to-use-this-project)  
+7. [Future Work & Improvements](#future-work--improvements)  
+8. [References](#references)  
+
+---
+
+## Introduction
+This report analyzes employee performance, demographics, and attrition within **Atlas Labs** using Power BI. It leverages comprehensive datasets to explore employee retention, satisfaction levels, and the factors that contribute to employee turnover. The primary objective is to provide HR leaders with actionable insights that inform strategies to reduce attrition and enhance workforce stability.
+
+---
+
+## Dataset Overview
+The dataset comprises several key tables:
+
 - **Fact Table:**
   - **PerformanceRatings**: Contains annual performance evaluation results.
 - **Dimension Tables:**
-  - **Employee**: Employee personal information.
-  - **EducationLevel**: Employee education background.
-  - **RatingLevel**: Performance rating levels.
-  - **SatisfiedLevel**: Employee satisfaction levels.
+  - **Employee**: Personal information of employees.
+  - **EducationLevel**: Details on employee education backgrounds.
+  - **RatingLevel**: Performance rating scales.
+  - **SatisfiedLevel**: Employee satisfaction ratings.
 
-## 🔄 Data Preparation
+---
 
-### **Data Inspection and Cleaning**
+## Data Preparation
+
+### Data Inspection and Cleaning
 - Loaded the dataset into **Power BI Desktop**.
-- Inspected and cleaned the data to remove duplicates, outliers, and errors.
-- Renamed tables for better clarity and changed data types as needed.
+- Conducted thorough data inspection to remove duplicates, outliers, and errors.
+- Standardized data types and renamed tables for clarity.
+- Designated the **PerformanceRatings** table as the primary fact table.
 
-### **Exploratory Data Analysis (EDA)**
-- Conducted an initial exploration of the dataset to understand distributions and trends.
+### Exploratory Data Analysis (EDA)
+- Performed an initial exploration to understand data distributions and trends.
 - Identified key patterns in employee performance, satisfaction, and attrition.
 - Detected and visualized outliers that could impact HR decision-making.
 
-### **Data Modeling**
-- Created a **Dimension Date Table** for time intelligence in **DAX**.
-- Established relationships between **FactPerformanceRating** and **DimSatisfiedLevel**, **DimRatingLevel**.
-![Data Model](screenshots/data_model.jpg)
+### Data Modeling
+- Developed a **Dimension Date Table** to leverage time intelligence functions in DAX.
+- Established robust relationships between **PerformanceRatings** and both **DimSatisfiedLevel** and **DimRatingLevel**.
 
-## 📈 Report Creation and Visualization
+> ![Data Model Screenshot](screenshots/data_model.jpg)
 
-### **1️⃣ Overview**
-- Displays key metrics:
-  - **Total Employees**: Active employees vs. employees who have left.
-  - **Employee Trends**: Trends of hires and attrition over the years.
-  - **Department Breakdown**: Employees segmented by department and job role.
+---
 
-![Overview Screenshot](screenshots/overview_page.jpg)
+## Report and Visualization
 
-### **2️⃣ Demographics**
-- **Age Distribution**: Displays age distribution across employees.
-- **Marital Status & Ethnicity**: Number of employees by marital status and average salary by ethnicity.
+### Overview Page
+- **Key Metrics**: Displays total employee counts (active vs. attrited), employee trends over time, and departmental breakdowns.
+- **Visualizations**: Features charts depicting overall HR metrics to provide a snapshot of workforce dynamics.
 
-![Demographics Screenshot](screenshots/demographics_page.jpg)
+**Explanation**:  
+This page offers a high-level overview of HR metrics, enabling quick assessments of the company’s employee base and overall performance trends.
 
-### **3️⃣ Performance Tracker**
-- **Employee Performance**: Details for each employee including start date, last review date, and next review date.
-- **Performance Trends**: Trends in self-ratings, manager ratings, and satisfaction scores.
+> ![Overview Screenshot](screenshots/overview_page.jpg)
 
-![Performance Tracker Screenshot](screenshots/perfomance_tracker_page.jpg)
-- employee can be filtered by
-![Employee Filter Screenshot](screenshots/employee_filter.jpg)
+### Demographics Page
+- **Age Distribution**: Visualizes the distribution of employee ages.
+- **Marital Status & Ethnicity**: Presents the count of employees by marital status and shows average salary by ethnicity.
 
-### **4️⃣ Attrition**
-- **Factors Impacting Attrition**: Analyzes the factors influencing employee attrition such as department, overtime, travel frequency, and tenure.
+**Explanation**:  
+This page provides insights into the demographic composition of the workforce, revealing key patterns such as the predominance of younger employees (e.g., 20-29 years old) and diversity metrics within the organization.
 
-![Attrition Screenshot](screenshots/attrition_page.jpg)
+> ![Demographics Screenshot](screenshots/demographics_page.jpg)
 
-## 📌 Key Findings & Insights
-- Insights into **employee performance trends**, **age distribution**, and **attrition factors**.
-- Identification of **key drivers of employee satisfaction** and **factors influencing attrition**.
-  
-## ⚡ How to Use This Project
+### Performance Tracker Page
+- **Employee Performance Details**: Displays individual employee performance data including start date, last review date, and next review date.
+- **Performance Trends**: Visualizes trends in self-ratings, manager ratings, and satisfaction scores.
+- **Interactive Filtering**: Enables filtering of employee data for deeper performance analysis.
 
-### **Power BI Report**
-- Download the **hr_analytics_report_atlaslabs.pbix**.
-- Open the file in **Power BI Desktop**.
-- Interact with the report to explore detailed insights.
+**Explanation**:  
+This page allows HR teams to track performance metrics over time, facilitating targeted interventions and performance improvement strategies.
 
-### **Using Cleaned Data**
-- The cleaned data file (**cleaned_data.csv**) can be used for further analysis in Python, R, or SQL.
+> ![Performance Tracker Screenshot](screenshots/perfomance_tracker_page.jpg)  
+> ![Employee Filter Screenshot](screenshots/employee_filter.jpg)
 
-## 🚀 Future Work & Improvements
-- **Expand dataset** to include employee feedback and exit interview data.
-- Implement **predictive analytics** to forecast attrition trends.
-- Perform **employee sentiment analysis** to assess workplace satisfaction.
+### Attrition Page
+- **Attrition Analysis**: Examines factors influencing employee turnover, including department, overtime, travel frequency, and tenure.
+- **Key Insights**: Highlights that the Sales department experiences higher attrition, particularly among employees with frequent travel, overtime work, and shorter tenure.
 
-## 🔗 References
-- [DataCamp Dataset](https://www.datacamp.com)
+**Explanation**:  
+This page is crucial for understanding why employees leave the organization. It identifies risk factors associated with attrition, thereby informing strategies to improve retention.
+
+> ![Attrition Screenshot](screenshots/attrition_page.jpg)
+
+---
+
+## Key Findings & Insights
+- **Employee Performance Trends**: Clear patterns indicate areas of strength and opportunities for improvement in employee performance.
+- **Demographic Patterns**: The majority of the workforce falls within the 20-29 age range, which has implications for talent development.
+- **Attrition Drivers**: High turnover rates in specific departments, particularly Sales, are linked to factors such as overtime, frequent travel, and short tenure.
+- **Actionable Insights**: These insights provide a foundation for developing strategies to enhance employee satisfaction and reduce turnover.
+
+---
+
+## How to Use This Project
+
+### Power BI Report
+1. Download the `hr_analytics_report_atlaslabs.pbix` file.
+2. Open it using **Power BI Desktop**.
+3. Interact with the dashboards to explore detailed HR insights and trends.
+
+### Using Cleaned Data
+- The cleaned data file (`cleaned_data.csv`) is available for further analysis using **Python**, **R**, or **SQL**.
+
+---
+
+## Future Work & Improvements
+- **Expand the Dataset**: Incorporate additional data sources such as employee feedback and exit interviews.
+- **Predictive Analytics**: Develop machine learning models to forecast attrition trends and proactively address retention issues.
+- **Employee Sentiment Analysis**: Utilize sentiment analysis to assess workplace satisfaction and identify areas for HR intervention.
+
+---
+
+## References
+- [DataCamp Dataset](https://www.datacamp.com)  
+- Research papers on HR analytics, employee retention strategies, and workforce management.
