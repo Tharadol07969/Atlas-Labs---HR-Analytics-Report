@@ -1,3 +1,2 @@
-*.pbix linguist-detectable
 *.csv linguist-detectable
-*.md linguist-documentation
+*.pbix linguist-detectable
